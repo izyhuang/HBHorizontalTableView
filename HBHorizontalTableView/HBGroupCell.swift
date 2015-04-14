@@ -50,7 +50,7 @@ class HBGroupCell: UITableViewCell, HBTableViewDelegate {
     }
     
     func tableView(horizontalTableView: HBHorizontalTableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: HBAppCell = horizontalTableView.tableView!.dequeueReusableCellWithIdentifier("app_cell", forIndexPath: indexPath) as HBAppCell
+        let cell: HBAppCell = horizontalTableView.tableView!.dequeueReusableCellWithIdentifier("app_cell", forIndexPath: indexPath) as! HBAppCell
         cell.configureCell(apps[indexPath.row])
         return cell
     }

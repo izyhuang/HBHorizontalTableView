@@ -107,7 +107,7 @@ class HBTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: HBGroupCell = tableView.dequeueReusableCellWithIdentifier("group_cell", forIndexPath: indexPath) as HBGroupCell
+        let cell: HBGroupCell = tableView.dequeueReusableCellWithIdentifier("group_cell", forIndexPath: indexPath) as! HBGroupCell
         cell.configureCell(groups[indexPath.row])
         return cell
     }

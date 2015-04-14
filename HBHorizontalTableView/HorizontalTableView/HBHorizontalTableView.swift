@@ -51,7 +51,7 @@ class HBHorizontalTableView: UIView, UITableViewDataSource, UITableViewDelegate 
         super.init(frame: frame)
         println("horizontal TableView -> initWithFrame")
         setTableView()
-        setFrame(self.frame)
+        set_Frame(self.frame)
         setContentOffset(self.contentOffset)
         setRowWidth(self.rowWidth)
     }
@@ -60,7 +60,7 @@ class HBHorizontalTableView: UIView, UITableViewDataSource, UITableViewDelegate 
         super.awakeFromNib()
         println("horizontal TableView -> awakeFromNib")
         setTableView()
-        setFrame(self.frame)
+        set_Frame(self.frame)
         setContentOffset(self.contentOffset)
         setRowWidth(self.rowWidth)
     }
@@ -86,7 +86,7 @@ class HBHorizontalTableView: UIView, UITableViewDataSource, UITableViewDelegate 
         tableView.registerNib(cellNib, forCellReuseIdentifier: "app_cell")
     }
     
-    func setFrame(frame: CGRect) {
+    func set_Frame(frame: CGRect) {
         super.frame = frame
         refreshOrientation()
     }
